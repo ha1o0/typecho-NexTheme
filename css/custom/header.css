@@ -267,6 +267,10 @@
   .logo-line {
     display: none;
   }
+
+  .modal-content {
+    width: 80%;
+  }
 }
 
 @media (min-width: 992px) {
