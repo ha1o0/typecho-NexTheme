@@ -19,7 +19,6 @@
         (function() {
             var storage = window.storageModule;
             const currentTheme = storage.getLocalStorage('theme');
-            console.log('cut', currentTheme);
             if (currentTheme === 'dark') {
                 document.documentElement.classList.toggle('theme-dark');
             }
@@ -39,7 +38,7 @@
     <script type="text/javascript" src="<?php $this->options->themeUrl('js/header.js'); ?>"></script>
     <script type="text/javascript" src="<?php $this->options->themeUrl('js/index.js'); ?>"></script>
     <script type="text/javascript">
-        var themeUrl = "<?php $this->options->themeUrl(''); ?>";
+        var logo = "<?php $this->options->logo(); ?>";
     </script>
     <!-- 通过自有函数输出HTML头部信息 -->
     <?php $this->header(); ?>
@@ -47,6 +46,20 @@
 <body>
 
 <div id="body">
+    <!-- 弹窗 -->
+    <div id="search-model" class="modal">
+        <!-- 弹窗内容 -->
+        <div class="modal-content">
+            <div class="search-input-container">
+                <form class="search-form" id="search" method="post" action="<?php $this->options->siteUrl(); ?>" role="search">
+                    <input type="text" id="s" name="s" class="text" placeholder="<?php _e('输入关键字搜索'); ?>"/>
+                    <button type="submit" class="submit"><?php _e('搜索'); ?></button>
+                </form>
+            </div>
+            <span id="modal-close" class="close"><i class="iconfont">&#xe640;</i></span>
+        </div>
+    </div>
+    </div>
     <div class="container body-container">
         <header id="header" class="clearfix">
             <div class="container">
@@ -95,7 +108,7 @@
                             <div class="dropdown">
                                 <a><i class="iconfont">&#xe70f;</i><?php _e('归档'); ?></a>
                             </div>
-                            <div class="dropdown">
+                            <div id="search-trigger" class="dropdown">
                                 <a><i class="iconfont">&#xe840;</i><?php _e('搜索'); ?></a>
                             </div>
                             <!-- <div class="site-search">

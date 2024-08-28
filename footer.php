@@ -39,7 +39,7 @@
 
         // 格式化显示
         $('#site-runtime').text(
-            '本网站居然已运行 ' +
+            '本站居然已运行 ' +
             days + ' 天 ' +
             formatTime(hours) + ' 小时 ' +
             formatTime(minutes) + ' 分 ' +

@@ -8,7 +8,6 @@
     --header-menu-bg-color: #ddd;
     --primary-color: #aaa;
     --secondary-color: #bbb;
-    --test-color: red;
     --sidebar-bg-color: #222;
     --sidebar-text-color: #999;
     --brand-color: #fff;
@@ -30,7 +29,6 @@
     --header-menu-bg-color: #555;
     --primary-color: #ccc;
     --secondary-color: #eee;
-    --test-color: green;
     --sidebar-bg-color: #222;
     --sidebar-text-color: #ccc;
     --brand-color: #fff;
@@ -41,12 +39,11 @@
 
 /* 在线链接服务仅供平台体验和调试使用，平台不承诺服务的稳定性，企业客户需下载字体包自行发布使用并做好备份。 */
 @font-face {
-    font-family: 'iconfont';
-    /* Project id 4665813 */
-    src: url('//at.alicdn.com/t/c/font_4665813_x9vw4ju23m.woff2?t=1724835978262') format('woff2'),
-        url('//at.alicdn.com/t/c/font_4665813_x9vw4ju23m.woff?t=1724835978262') format('woff'),
-        url('//at.alicdn.com/t/c/font_4665813_x9vw4ju23m.ttf?t=1724835978262') format('truetype');
-}
+    font-family: 'iconfont';  /* Project id 4665813 */
+    src: url('//at.alicdn.com/t/c/font_4665813_81ytwm87ga6.woff2?t=1724859980197') format('woff2'),
+         url('//at.alicdn.com/t/c/font_4665813_81ytwm87ga6.woff?t=1724859980197') format('woff'),
+         url('//at.alicdn.com/t/c/font_4665813_81ytwm87ga6.ttf?t=1724859980197') format('truetype');
+  }
 
 .iconfont {
     font-family: "iconfont" !important;

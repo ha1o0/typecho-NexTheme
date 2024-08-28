@@ -1,7 +1,6 @@
 $(document).ready(function() {
-    console.log('ready index...')
     preloadImages([
-        'https://static.objc.eu.org/pc-logo.png',
+        logo,
     ])
     listenSideBar()
     var logoLines = document.querySelectorAll('.site-meta .logo-line');
