@@ -1,0 +1,259 @@
+.custom-button {
+    cursor: pointer;
+    user-select: none;
+}
+
+html {
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+a {
+    color: var(--info-text-color);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--link-hover-color);
+    border-bottom-color: var(--link-hover-color);
+}
+
+.body-container {
+    width: 100vw;
+    transition: transform 0.3s ease-in-out;
+    padding: 0;
+}
+
+.container-with-sidebar {
+    transform: translateX(-160px);
+}
+
+#main {
+    width: 900px;
+}
+
+/* post区域 */
+.post-title>a {
+    color: var(--text-color);
+    text-decoration: none;
+    /* 初始无下划线 */
+    display: inline-block;
+    /* 确保元素是内联块，以便应用动画 */
+    position: relative;
+    /* 相对定位，为下划线动画做准备 */
+    overflow: hidden;
+    /* 隐藏超出部分 */
+}
+
+article,
+#comment .post-near {
+    width: 100%;
+}
+
+/* article {
+    margin-bottom: 80px;
+} */
+
+.post-title>a:hover {
+    color: var(--link-hover-color);
+}
+
+.container>.row {
+    display: flex;
+    justify-content: center;
+}
+
+.post-title,
+.post-meta {
+    text-align: center;
+}
+
+.post-content {
+    letter-spacing: 2px;
+}
+
+.post-content .submit {
+    border: 0;
+    width: 80px;
+    height: 34px;
+    border-radius: 2px;
+    background-color: var(--button-bg-color) !important;
+    color: var(--button-text-color) !important;
+}
+
+.post {
+    border-bottom: 1px solid var(--text-color);
+}
+
+.time {
+    color: var(--info-text-color);
+    border-bottom: 1px dashed var(--info-text-color);
+}
+
+/* 定义文字的初始样式 */
+.text-with-animation {
+    text-decoration: none;
+    /* 初始无下划线 */
+    display: inline-block;
+    /* 确保元素是内联块，以便应用动画 */
+    position: relative;
+    /* 相对定位，为下划线动画做准备 */
+    overflow: hidden;
+    /* 隐藏超出部分 */
+    padding-bottom: 6px;
+    /* 为下划线预留空间 */
+}
+
+/* 定义下划线的动画效果 */
+.text-with-animation::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    /* 下划线高度 */
+    background-color: var(--link-hover-color);
+    /* 下划线颜色 */
+    transform-origin: center;
+    /* 变换中心点 */
+    transform: scaleX(0);
+    /* 初始状态为0，即无下划线 */
+    transition: transform 0.2s ease-in-out;
+    /* 动画效果 */
+}
+
+/* 鼠标悬停时的样式 */
+.text-with-animation:hover::before {
+    transform: scaleX(1);
+    /* 鼠标悬停时下划线展开 */
+}
+
+/* 定义动画名称 */
+@keyframes fadeInMove {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+        /* 初始状态，元素向上移动20px */
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        /* 结束状态，元素回到原位 */
+    }
+}
+
+/* 应用动画 */
+.fade-in-move {
+    animation-name: fadeInMove;
+    /* 引用动画名称 */
+    animation-duration: 1s;
+    /* 动画持续时间 */
+    animation-fill-mode: forwards;
+    /* 动画完成后保持最后一帧状态 */
+    animation-delay: 0s;
+    /* 动画延迟时间 */
+    opacity: 0;
+    /* 初始透明度 */
+}
+
+
+
+/* 评论区 */
+#response,
+#comments h3 {
+    color: var(--text-color);
+}
+
+.comment-author-info-container {
+    display: flex;
+    align-items: center;
+}
+
+.comment-author-info-container>div {
+    display: flex;
+    align-items: center;
+    width: calc(100% - 10vw) / 3;
+    margin: 10px 0;
+    margin-right: 20px;
+}
+
+.comment-author-info-container #mail {
+    padding-left: 55px;
+}
+
+.comment-content-container #textarea {
+    padding-left: 55px;
+}
+
+.comment-options-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.submit-comment {
+    width: 10vw !important;
+    min-width: 80px;
+    background-color: var(--button-bg-color) !important;
+    color: var(--button-text-color) !important;
+}
+
+/* footer */
+#footer a {
+    color: var(--text-color);
+}
+
+
+/* 侧边栏按钮 */
+.toggle-right-sidebar {
+    position: fixed;
+    right: 30px;
+    bottom: 5vh;
+    z-index: 101;
+}
+
+/* -----------------
+ * Responsive
+ *--------------- */
+@media (max-width: 768px) {
+    #main {
+        width: 100vw;
+    }
+
+    .submit-comment {
+        width: 100% !important;
+    }
+
+    .comment-author-info-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .comment-author-info-container>div {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .comment-options-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+    }
+
+    .submit-comment-container {
+        width: 100%;
+    }
+}
+
+@media (min-width: 992px) {}
+
+@media (min-width: 1200px) {}

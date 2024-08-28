@@ -1,0 +1,58 @@
+@charset "UTF-8";
+
+:root {
+    --bg-color: #fff;
+    --text-color: #555;
+    --info-text-color: #999;
+    --link-hover-color: #222;
+    --header-menu-bg-color: #ddd;
+    --primary-color: #aaa;
+    --secondary-color: #bbb;
+    --test-color: red;
+    --sidebar-bg-color: #222;
+    --sidebar-text-color: #999;
+    --brand-color: #fff;
+    --header-bg-color: #f5f5f5;
+    --button-bg-color: #222;
+    --button-text-color: #eee;
+
+    /* 过渡效果变量 */
+    --transition-time: 0.3s;
+    --transition-props: background-color, color, border-color;
+}
+
+
+.theme-dark {
+    --bg-color: #282828;
+    --text-color: #ccc;
+    --info-text-color: #f0e9e9;
+    --link-hover-color: #fff;
+    --header-menu-bg-color: #555;
+    --primary-color: #ccc;
+    --secondary-color: #eee;
+    --test-color: green;
+    --sidebar-bg-color: #222;
+    --sidebar-text-color: #ccc;
+    --brand-color: #fff;
+    --header-bg-color: #333;
+    --button-bg-color: #ccc;
+    --button-text-color: #222;
+}
+
+/* 在线链接服务仅供平台体验和调试使用，平台不承诺服务的稳定性，企业客户需下载字体包自行发布使用并做好备份。 */
+@font-face {
+    font-family: 'iconfont';
+    /* Project id 4665813 */
+    src: url('//at.alicdn.com/t/c/font_4665813_x9vw4ju23m.woff2?t=1724835978262') format('woff2'),
+        url('//at.alicdn.com/t/c/font_4665813_x9vw4ju23m.woff?t=1724835978262') format('woff'),
+        url('//at.alicdn.com/t/c/font_4665813_x9vw4ju23m.ttf?t=1724835978262') format('truetype');
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
