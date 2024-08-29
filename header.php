@@ -34,6 +34,7 @@
     <link rel="stylesheet" href="<?php $this->options->themeUrl('css/custom/index.css'); ?>">
     <link rel="stylesheet" href="<?php $this->options->themeUrl('css/custom/header.css'); ?>">
     <link rel="stylesheet" href="<?php $this->options->themeUrl('css/custom/rightSidebar.css'); ?>">
+    <link rel="stylesheet" href="<?php $this->options->themeUrl('css/custom/archive.css'); ?>">
 
     <script type="text/javascript" src="<?php $this->options->themeUrl('js/header.js'); ?>"></script>
     <script type="text/javascript" src="<?php $this->options->themeUrl('js/index.js'); ?>"></script>
@@ -49,7 +50,7 @@
     <!-- 弹窗 -->
     <div id="search-model" class="modal">
         <!-- 弹窗内容 -->
-        <div class="modal-content">
+        <div id="search-modal-content" class="modal-content">
             <div class="search-input-container">
                 <form class="search-form" id="search" method="post" action="<?php $this->options->siteUrl(); ?>" role="search">
                     <input type="text" id="s" name="s" class="text" placeholder="<?php _e('输入关键字搜索'); ?>"/>
@@ -64,16 +65,6 @@
         <header id="header" class="clearfix">
             <div class="container">
                 <div class="header-row">
-                    <!-- <div class="site-name col-mb-12 col-9">
-                        <?php if ($this->options->logoUrl): ?>
-                            <a id="logo" href="<?php $this->options->siteUrl(); ?>">
-                                <img src="<?php $this->options->logoUrl() ?>" alt="<?php $this->options->title() ?>"/>
-                            </a>
-                        <?php else: ?>
-                            <a id="logo" href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title() ?></a>
-                            <p class="description"><?php $this->options->description() ?></p>
-                        <?php endif; ?>
-                    </div> -->
                     <div class="site-meta">
                         <a href="/" class="brand">
                             <i class="logo-line"></i>
@@ -98,26 +89,12 @@
                                     <?php endwhile; ?>
                                 </div>
                             </div>
-                            <!-- <a><?php _e('归档'); ?></a> -->
-                            <!-- <?php \Widget\Contents\Page\Rows::alloc()->to($pages); ?>
-                            <?php while ($pages->next()): ?>
-                                <a<?php if ($this->is('page', $pages->slug)): ?> class="current"<?php endif; ?>
-                                    href="<?php $pages->permalink(); ?>"
-                                    title="<?php $pages->title(); ?>"><?php $pages->title(); ?></a>
-                            <?php endwhile; ?> -->
                             <div class="dropdown">
-                                <a><i class="iconfont">&#xe70f;</i><?php _e('归档'); ?></a>
+                                <a href="<?php $this->options->siteUrl(); ?>index.php/archive.html"><i class="iconfont">&#xe70f;</i><?php _e('归档'); ?></a>
                             </div>
                             <div id="search-trigger" class="dropdown">
                                 <a><i class="iconfont">&#xe840;</i><?php _e('搜索'); ?></a>
                             </div>
-                            <!-- <div class="site-search">
-                                <form id="search" method="post" action="<?php $this->options->siteUrl(); ?>" role="search">
-                                    <label for="s" class="sr-only"><?php _e('搜索关键字'); ?></label>
-                                    <input type="text" id="s" name="s" class="text" placeholder="<?php _e('输入关键字搜索'); ?>"/>
-                                    <button type="submit" class="submit"><?php _e('搜索'); ?></button>
-                                </form>
-                            </div> -->
                         </nav>
 
                     </div>

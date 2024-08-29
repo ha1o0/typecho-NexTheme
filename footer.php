@@ -12,7 +12,7 @@
             <?php endif ?>
         </footer><!-- end #footer -->
     </div>
-    <?php $this->need('rightSidebar.php'); ?>
+    <?php $this->need('right-sidebar.php'); ?>
 </div><!-- end #body -->
 <script>
     // 网站的起始时间，这里假设你已经有了这个值

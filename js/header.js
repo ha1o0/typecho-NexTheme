@@ -39,7 +39,8 @@ function initSearch() {
     var span = $("#modal-close");
 
     // 点击搜索按钮弹出弹窗
-    btn.click(function() {
+    btn.click(function(event) {
+        event.stopPropagation();
         modal.css('display', 'block');
     })
 
@@ -50,7 +51,12 @@ function initSearch() {
 
     // 在用户点击弹窗外部时，除了关闭按钮外，关闭弹窗
     $(window).on('click', function(event) {
-        if (event.target == modal) {
+        if (modal.css('display') === 'none') {
+            return;
+        }
+        var target = $(event.target);
+        var searchModalContent = $('#search-modal-content');
+        if (target.closest(searchModalContent).length === 0) {
             modal.css('display', 'none');
         }
     });
