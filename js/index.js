@@ -27,10 +27,26 @@ function preloadImages(imagePaths) {
 
 function listenSideBar() {
     $(".toggle-right-sidebar").click(toggleRightSidebar)
+    // 在用户点击sidebar外部时，除了关闭按钮外，关闭sidebar
+    const sidebar = $("#right-sidebar");
+    $(window).click(function(event) {
+        if (!sidebar.hasClass('right-sidebar-open')) {
+            return;
+        }
+        var target = $(event.target);
+        // var searchModalContent = $('#search-modal-content');
+        if (target.closest(sidebar).length === 0) {
+            toggleRightSidebar(null);
+        }
+    });
 }
 
-function toggleRightSidebar() {
-    $('.right-sidebar').toggleClass('right-sidebar-open');
+function toggleRightSidebar(event) {
+    if (event) {
+        event.stopPropagation();
+    }
+    $('#right-sidebar').toggleClass('right-sidebar-open');
+    $('.body-container-overlay').toggleClass('body-container-overlay-show');
     $('.body-container').toggleClass('container-with-sidebar');
     $('.right-sidebar-panel').toggleClass('right-sidebar-panel-active');
     $('.sidebar-toggle').toggleClass('sidebar-toggle-active')

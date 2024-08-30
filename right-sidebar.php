@@ -6,7 +6,7 @@
     <span class="toggle-line"></span>
 </div>
 
-<div class="right-sidebar" id="secondary" role="complementary">
+<div class="right-sidebar" id="right-sidebar" role="complementary">
     <div class="site-overview-wrap sidebar-panel right-sidebar-panel">
         <div class="site-author animated">
             <img class="site-author-image" src="<?php $this->options->logo(); ?>" loading="lazy">

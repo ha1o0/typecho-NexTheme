@@ -61,6 +61,7 @@
         </div>
     </div>
     </div>
+    <div class="container body-container body-container-overlay"></div>
     <div class="container body-container">
         <header id="header" class="clearfix">
             <div class="container">

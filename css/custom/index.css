@@ -42,12 +42,26 @@ a:hover {
     padding: 0;
 }
 
-.container-with-sidebar {
-    transform: translateX(-160px);
+.body-container-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: black;
+    z-index: 100;
+    opacity: 0;
+    transition: all 0.3s;
+    pointer-events: none;
 }
 
 .main {
     width: 900px;
+    box-sizing: border-box;
+}
+
+.row {
+    box-sizing: border-box;
 }
 
 /* post区域 */
@@ -61,6 +75,10 @@ a:hover {
     /* 相对定位，为下划线动画做准备 */
     overflow: hidden;
     /* 隐藏超出部分 */
+}
+
+.post-list-item {
+    margin-bottom: 20px;
 }
 
 article,
@@ -269,6 +287,18 @@ article,
 
     .submit-comment-container {
         width: 100%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .body-container-overlay-show {
+        opacity: 0.5;
+    }
+}
+
+@media (min-width: 1025px) {
+    .container-with-sidebar {
+        transform: translateX(-160px);
     }
 }
 

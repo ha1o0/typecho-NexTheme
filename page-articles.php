@@ -8,7 +8,6 @@
 
 <?php $this->need('header.php'); ?>
 <section class="archive-section content-wrap">
-  <div class="row">
     <main class="main main-content">
       <div class="total-posts">很好! 目前共计<span style="font-weight:600;margin:0 3px;">
         <?php Typecho_Widget::widget('Widget_Stat')->to($stat)->publishedPostsNum(); ?></span>篇文章，继续加油呀~
@@ -32,6 +31,5 @@
         </div>
       </article>
     </main>
-  </div>
 </section>
 <?php $this->need('footer.php'); ?>

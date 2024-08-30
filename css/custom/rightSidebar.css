@@ -127,9 +127,10 @@
     opacity: 1;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 767px) {
     .sidebar-toggle {
         opacity: 1;
+        display: block;
     }
 }
 

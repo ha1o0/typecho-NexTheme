@@ -50,7 +50,7 @@ function initSearch() {
     })
 
     // 在用户点击弹窗外部时，除了关闭按钮外，关闭弹窗
-    $(window).on('click', function(event) {
+    $(window).click(function(event) {
         if (modal.css('display') === 'none') {
             return;
         }

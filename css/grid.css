@@ -90,9 +90,9 @@
  * Tablet and up
  */
 @media (min-width: 768px) {
-  .container {
+  /* .container {
     max-width: 80vw;
-  }
+  } */
 
   .col-tb-1 {
     width: 8.33333%;
@@ -303,9 +303,9 @@
  * Desktop and up
  */
 @media (min-width: 992px) {
-  .container {
+  /* .container {
     max-width: 80vw;
-  }
+  } */
 
   .col-1 {
     width: 8.33333%;
@@ -516,9 +516,9 @@
  * Widescreen and up
  */
 @media (min-width: 1200px) {
-  .container {
+  /* .container {
     max-width: 80vw;
-  }
+  } */
 
   .col-wd-1 {
     width: 8.33333%;
