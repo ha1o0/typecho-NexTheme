@@ -244,7 +244,7 @@
 }
 
 .links-of-author a::before {
-    background: #fff;
+    background: #87daff;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-100%);

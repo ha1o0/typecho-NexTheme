@@ -162,8 +162,6 @@
   display: none;
   position: absolute;
   top: 32px;
-  min-width: 160px;
-  /* box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); */
   z-index: 1;
   font-size: smaller;
   background-color: var(--bg-color);
@@ -176,10 +174,17 @@
 }
 
 .dropdown-content a {
-  /* color: var(--text-color); */
+  width: 100%;
+  text-align: center;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
+  white-space: nowrap;
+  /* 防止文本换行 */
+  overflow: hidden;
+  /* 隐藏超出部分 */
+  text-overflow: ellipsis;
+  /* 显示省略号 */
 }
 
 .dropdown:hover .dropdown-content {
