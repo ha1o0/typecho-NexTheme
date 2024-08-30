@@ -88,6 +88,10 @@ a:hover {
     margin-bottom: 20px;
 }
 
+.author-icon {
+    margin-right: 5px;
+}
+
 article,
 #comment .post-near {
     width: 100%;

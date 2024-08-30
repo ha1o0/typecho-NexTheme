@@ -9,14 +9,14 @@
         </h1>
         <ul class="post-meta">
             <li itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <?php _e('作者: '); ?><a itemprop="name"
-                                       href="<?php $this->author->permalink(); ?>"
-                                       rel="author"><?php $this->author(); ?></a>
+                <i class="author-icon iconfont">&#xe7ae;</i>
+                <a itemprop="name" href="<?php $this->author->permalink(); ?>"
+                    rel="author"><?php $this->author(); ?></a>
             </li>
-            <li><?php _e('时间: '); ?>
+            <li><i class="author-icon iconfont">&#xe646;</i>
                 <time class="time" datetime="<?php $this->date('c'); ?>" itemprop="datePublished"><?php $this->date(); ?></time>
             </li>
-            <li><?php _e('分类: '); ?><?php $this->category(','); ?></li>
+            <li><i class="author-icon iconfont">&#xe85c;</i><?php $this->category(','); ?></li>
         </ul>
         <div class="post-content" itemprop="articleBody">
             <?php $this->content(); ?>

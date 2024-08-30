@@ -19,13 +19,18 @@ $this->need('header.php');
               <a class="text-with-animation" itemprop="url" href="<?php $this->permalink() ?>"><?php $this->title() ?></a>
             </h2>
             <ul class="post-meta">
-                <li itemprop="author" itemscope itemtype="http://schema.org/Person"><?php _e('作者: '); ?><a
-                        itemprop="name" href="<?php $this->author->permalink(); ?>"
-                        rel="author"><?php $this->author(); ?></a></li>
-                <li><?php _e('时间: '); ?>
-                    <time class="time" datetime="<?php $this->date('c'); ?>" itemprop="datePublished"><?php $this->date(); ?></time>
+                <li itemprop="author" itemscope itemtype="http://schema.org/Person">
+                    <i class="author-icon iconfont">&#xe7ae;</i>
+                    <a itemprop="name" href="<?php $this->author->permalink(); ?>"
+                        rel="author"><?php $this->author(); ?>
+                    </a>
                 </li>
-                <li><?php _e('分类: '); ?><?php $this->category(','); ?></li>
+                <li>
+                    <i class="author-icon iconfont">&#xe646;</i>
+                    <time class="time" datetime="<?php $this->date('c'); ?>" itemprop="datePublished"><?php $this->date(); ?>
+                    </time>
+                </li>
+                <li><i class="author-icon iconfont">&#xe85c;</i><?php $this->category(','); ?></li>
                 <li itemprop="interactionCount">
                     <a itemprop="discussionUrl"
                        href="<?php $this->permalink() ?>#comments"><?php $this->commentsNum('评论', '1 条评论', '%d 条评论'); ?></a>
