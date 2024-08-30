@@ -72,6 +72,10 @@
     .sidebar-toggle {
         right: 20px;
     }
+
+    #scroll-percentage {
+        right: 20px;
+    }
 }
 
 .toggle {

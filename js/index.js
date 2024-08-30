@@ -1,18 +1,8 @@
 $(document).ready(function() {
-    preloadImages([
-        logo,
-    ])
+    preloadImages([logo])
     listenSideBar()
-    var logoLines = document.querySelectorAll('.site-meta .logo-line');
-    var siteTitle = document.querySelector('.site-meta .site-title');
-
-    // 延迟一段时间再触发动画，确保页面元素已经渲染
-    setTimeout(function() {
-        logoLines.forEach(function(line) {
-            line.classList.add('animate');
-        });
-        siteTitle.classList.add('animate');
-    }, 100); // 延迟时间可以根据实际情况调整
+    listenScroll()
+    logoAnimate()
 })
 
 function preloadImages(imagePaths) {
@@ -23,6 +13,19 @@ function preloadImages(imagePaths) {
             console.error('Image failed to load:', this.src);
         };
     });
+}
+
+function logoAnimate() {
+    var logoLines = document.querySelectorAll('.site-meta .logo-line');
+    var siteTitle = document.querySelector('.site-meta .site-title');
+
+    // 延迟一段时间再触发动画，确保页面元素已经渲染
+    setTimeout(function() {
+        logoLines.forEach(function(line) {
+            line.classList.add('animate');
+        });
+        siteTitle.classList.add('animate');
+    }, 100); // 延迟时间可以根据实际情况调整
 }
 
 function listenSideBar() {
@@ -51,4 +54,26 @@ function toggleRightSidebar(event) {
     $('.right-sidebar-panel').toggleClass('right-sidebar-panel-active');
     $('.sidebar-toggle').toggleClass('sidebar-toggle-active')
     $('.toggle').toggleClass('toggle-close')
+}
+
+function listenScroll() {
+    $('#body-container').scroll(function() {
+        // 获取滚动容器
+        var $container = $(this);
+        // 计算滚动百分比
+        var scrollPercentage = ($container.scrollTop() / ($container[0].scrollHeight - $container.height())) * 100;
+        if (scrollPercentage > 0) {
+            $('#scroll-percentage').css('visibility', 'visible');
+            $('#scroll-percentage').css('opacity', 1);
+        } else {
+            $('#scroll-percentage').css('visibility', 'hidden');
+            $('#scroll-percentage').css('opacity', 0);
+        }
+        // 更新 #scroll-percentage 元素的文本内容
+        $('#scroll-percentage span').text((scrollPercentage > 100 ? 100 : scrollPercentage).toFixed(0) + '%');
+    });
+
+    $("#scroll-percentage").click(function() {
+        $('#body-container').animate({ scrollTop: 0 }, 'slow');
+    })
 }

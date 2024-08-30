@@ -5,6 +5,7 @@
     <span class="toggle-line"></span>
     <span class="toggle-line"></span>
 </div>
+<div id="scroll-percentage"><i class="iconfont">&#xe617;</i><span>0%</span></div>
 
 <div class="right-sidebar" id="right-sidebar" role="complementary">
     <div class="site-overview-wrap sidebar-panel right-sidebar-panel">

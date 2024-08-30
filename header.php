@@ -13,7 +13,12 @@
         ], '', ' - '); ?><?php $this->options->title(); ?></title>
 
 
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.slim.min.js"></script>
+    <script type="text/javascript"
+        src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+        crossorigin="anonymous"
+    >
+    </script>
     <script type="text/javascript" src="<?php $this->options->themeUrl('js/storage.js'); ?>"></script>
     <script>
         (function() {
@@ -62,7 +67,7 @@
     </div>
     </div>
     <div class="container body-container body-container-overlay"></div>
-    <div class="container body-container">
+    <div id="body-container" class="container body-container">
         <header id="header" class="clearfix">
             <div class="container">
                 <div class="header-row">

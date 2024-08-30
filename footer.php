@@ -15,8 +15,6 @@
     <?php $this->need('right-sidebar.php'); ?>
 </div><!-- end #body -->
 <script>
-    // 网站的起始时间，这里假设你已经有了这个值
-    // 你可以通过后端传递这个值到前端，这里只是一个示例
     var siteStartAt = '<?php echo $this->options->siteStartAt(); ?>';
     var siteStartTime = new Date(siteStartAt).getTime();
 

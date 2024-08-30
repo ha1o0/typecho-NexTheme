@@ -41,12 +41,12 @@ function initSearch() {
     // 点击搜索按钮弹出弹窗
     btn.click(function(event) {
         event.stopPropagation();
-        modal.css('display', 'block');
+        modal.fadeToggle('fast');
     })
 
     // 点击关闭按钮关闭弹窗
     span.click(function() {
-        modal.css('display', 'none');
+        modal.fadeToggle('fast');
     })
 
     // 在用户点击弹窗外部时，除了关闭按钮外，关闭弹窗
@@ -57,7 +57,7 @@ function initSearch() {
         var target = $(event.target);
         var searchModalContent = $('#search-modal-content');
         if (target.closest(searchModalContent).length === 0) {
-            modal.css('display', 'none');
+            modal.fadeToggle('fast');
         }
     });
 }
