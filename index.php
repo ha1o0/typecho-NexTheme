@@ -1,11 +1,11 @@
 <?php
 /**
- * NexT theme for Typecho
+ * NexTheme for Typecho
  *
- * @package NexT theme
+ * @package NexTheme
  * @author ha1o0
  * @version 1.0
- * @link https://github.com
+ * @link https://github.com/ha1o0
  */
 
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
