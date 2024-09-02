@@ -92,6 +92,10 @@ a:hover {
     margin-right: 5px;
 }
 
+.page-navigator a:hover {
+    background: var(--primary-color);
+}
+
 article,
 #comment .post-near {
     width: 100%;
@@ -115,10 +119,6 @@ article,
     text-align: center;
 }
 
-.post-content {
-    letter-spacing: 2px;
-}
-
 .post-content .submit {
     border: 0;
     width: 80px;
@@ -129,11 +129,24 @@ article,
 }
 
 .post {
-    border-bottom: 1px solid var(--text-color);
+    border-bottom: 0;
 }
 
 .post-near {
     padding: 0 20px;
+}
+
+.post-button {
+    text-align: center;
+}
+
+.post-button .btn {
+    background: 0 0;
+    border: 0;
+    border-bottom: 2px solid var(--btn-default-border-color);
+    padding: 0;
+    transition-property: border;
+    color: var(--info-text-color);
 }
 
 .time {

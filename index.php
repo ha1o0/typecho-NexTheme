@@ -14,7 +14,7 @@ $this->need('header.php');
 
 <div class="main" id="main" role="main">
     <?php while ($this->next()): ?>
-        <article class="post-list-item fade-in-move" itemscope itemtype="http://schema.org/BlogPosting">
+        <article class="post-list-item fade-in-move post" itemscope itemtype="http://schema.org/BlogPosting">
             <h2 class="post-title" itemprop="name headline">
               <a class="text-with-animation" itemprop="url" href="<?php $this->permalink() ?>"><?php $this->title() ?></a>
             </h2>
@@ -38,6 +38,9 @@ $this->need('header.php');
             </ul>
             <div class="post-content" itemprop="articleBody">
                 <p><?php $this->excerpt('180', '...'); ?></p>
+            </div>
+            <div class="post-button">
+                <a class="btn" href="<?php $this->permalink() ?>">阅读全文 »</a>
             </div>
         </article>
     <?php endwhile; ?>

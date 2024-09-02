@@ -15,12 +15,12 @@
     --button-bg-color: #222;
     --button-text-color: #eee;
     --search-modal-bg-color: #222;
+    --btn-default-border-color: #aaa;
 
     /* 过渡效果变量 */
     --transition-time: 0.3s;
     --transition-props: background-color, color, border-color;
 }
-
 
 .theme-dark {
     --bg-color: #282828;
@@ -37,6 +37,7 @@
     --button-bg-color: #ccc;
     --button-text-color: #222;
     --search-modal-bg-color: darkgray;
+    --btn-default-border-color: #555;
 }
 
 @font-face {
