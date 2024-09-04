@@ -74,7 +74,7 @@
                     <div class="site-meta">
                         <a href="/" class="brand">
                             <i class="logo-line"></i>
-                            <h1 class="site-title"><?php $this->options->title(); ?></h1>
+                            <p class="site-title"><?php $this->options->title(); ?></p>
                             <i class="logo-line"></i>
                         </a>
                         <i id="switch-theme" class="iconfont theme">&#xe654;</i>
