@@ -21,10 +21,10 @@ h3,
 h4,
 h5,
 h6 {
-    margin: 0;
+    margin: 20px 0 !important;
     padding: 0;
     color: var(--text-color);
-    font-weight: normal;
+    font-weight: bolder;
     line-height: 1;
     font-family: Lato, "PingFang SC", "Microsoft YaHei", sans-serif;
 }
@@ -104,6 +104,11 @@ article,
 /* article {
     margin-bottom: 80px;
 } */
+
+.post-content pre code,
+.comment-content pre code {
+    padding: 0;
+}
 
 .post-title>a:hover {
     color: var(--link-hover-color);
